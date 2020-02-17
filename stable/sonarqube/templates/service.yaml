@@ -21,6 +21,9 @@ spec:
   ports:
     - port: {{ .Values.service.externalPort }}
       targetPort: http
+      {{- if .Values.service.nodePort}}
+      loadBalancerIP: {{.Values.service.nodePort}}
+      {{- end }}
       protocol: TCP
       name: http
   selector:

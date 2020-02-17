@@ -1,9 +1,9 @@
 dependencies:
   - name: postgresql
     version: 8.2.0
-    repository: /charts/stable/postgresql/
+    repository: /stable/postgresql/
     condition: postgresql.enabled
   - name: mysql
     version: 0.6.0
-    repository: /charts/stable/mysql/
+    repository: /stable/mysql/
     condition: mysql.enabled
